@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="WAViewer.Pages.StartupPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WAViewer.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="480">
+        <StackPanel Spacing="16">
+
+            <TextBlock Text="启动"
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,8"/>
+
+            <!-- 音频文件 -->
+            <TextBlock Text="音频文件"
+                       Style="{StaticResource SubtitleTextBlockStyle}"
+                       Margin="0,0,0,-8"/>
+
+            <Grid ColumnSpacing="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="FilePathBox"
+                         PlaceholderText="选择音频文件..."
+                         IsReadOnly="True"
+                         TextChanged="FilePathBox_TextChanged"/>
+                <Button x:Name="BrowseButton"
+                        Grid.Column="1"
+                        Content="浏览"
+                        Click="BrowseButton_Click"/>
+            </Grid>
+
+            <!-- 音量 -->
+            <TextBlock Text="音量"
+                       Style="{StaticResource SubtitleTextBlockStyle}"
+                       Margin="0,12,0,-8"/>
+
+            <Grid ColumnSpacing="12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Slider x:Name="VolumeSlider"
+                        Minimum="0" Maximum="100"
+                        Value="50"
+                        ValueChanged="VolumeSlider_ValueChanged"/>
+                <TextBlock x:Name="VolumeLabel"
+                           Grid.Column="1"
+                           Text="50%"
+                           VerticalAlignment="Center"
+                           Width="40"/>
+            </Grid>
+
+            <!-- 显示模式 -->
+            <TextBlock Text="显示"
+                       Style="{StaticResource SubtitleTextBlockStyle}"
+                       Margin="0,12,0,-8"/>
+
+            <StackPanel Orientation="Horizontal" Spacing="24">
+                <RadioButton x:Name="WaveformRadio"
+                             Content="波形"
+                             IsChecked="True"
+                             GroupName="DisplayMode"/>
+                <RadioButton x:Name="SpectrumRadio"
+                             Content="频谱"
+                             GroupName="DisplayMode"/>
+            </StackPanel>
+
+            <!-- 开始按钮 -->
+            <Button x:Name="StartButton"
+                    Content="开始"
+                    HorizontalAlignment="Center"
+                    Width="160" Height="44"
+                    Margin="0,24,0,0"
+                    Style="{StaticResource AccentButtonStyle}"
+                    Click="StartButton_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Page>

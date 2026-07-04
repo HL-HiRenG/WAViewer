@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="WAViewer.Pages.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WAViewer.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <!-- SettingsCard 卡片样式 -->
+        <Style x:Key="SettingsCardBorder" TargetType="Border">
+            <Setter Property="Background" Value="{ThemeResource CardBackgroundFillColorDefault}"/>
+            <Setter Property="BorderBrush" Value="{ThemeResource CardStrokeColorDefaultBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="24,16"/>
+        </Style>
+
+        <Style x:Key="SettingsCardHeader" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0,0,0,4"/>
+        </Style>
+
+        <Style x:Key="SettingsCardDescription" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="{ThemeResource TextFillColorSecondaryBrush}"/>
+        </Style>
+    </Page.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Spacing="16" Margin="32,24" MaxWidth="600">
+
+            <TextBlock Text="设置"
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       Margin="0,0,0,8"/>
+
+            <!-- ========== 设置卡片 ========== -->
+            <Border Style="{StaticResource SettingsCardBorder}">
+                <StackPanel Spacing="4">
+                    <TextBlock Text="通用设置" Style="{StaticResource SettingsCardHeader}"/>
+                    <TextBlock Text="配置默认的音量和显示模式"
+                               Style="{StaticResource SettingsCardDescription}"
+                               Margin="0,0,0,10"/>
+
+                    <StackPanel Spacing="14" Width="380">
+
+                        <!-- 默认音量 -->
+                        <Grid ColumnSpacing="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="44"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="默认音量" VerticalAlignment="Center"/>
+                            <Slider x:ConnectionId='7' x:Name="DefaultVolumeSlider" Grid.Column="1"
+                                    Minimum="0" Maximum="100"
+                                                                        />
+                            <TextBlock x:ConnectionId='8' x:Name="DefaultVolumeLabel" Grid.Column="2"
+                                       Text="50%" VerticalAlignment="Center"/>
+                        </Grid>
+
+                        <!-- 默认显示模式 -->
+                        <Grid ColumnSpacing="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="默认显示模式" VerticalAlignment="Center"/>
+                            <StackPanel Orientation="Horizontal" Spacing="20" Grid.Column="1">
+                                <RadioButton x:ConnectionId='5' x:Name="DefaultWaveform"
+                                             Content="波形" GroupName="DefaultDisplay"
+                                                                             />
+                                <RadioButton x:ConnectionId='6' x:Name="DefaultSpectrum"
+                                             Content="频谱" GroupName="DefaultDisplay"
+                                                                             />
+                            </StackPanel>
+                        </Grid>
+
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- ========== 关于卡片（可展开） ========== -->
+            <Border Style="{StaticResource SettingsCardBorder}" Padding="0">
+                <StackPanel>
+                    <Button x:ConnectionId='2' x:Name="AboutToggle"
+                                                     
+                            HorizontalAlignment="Stretch"
+                            HorizontalContentAlignment="Stretch"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Padding="24,14">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="关于" Style="{StaticResource SettingsCardHeader}"
+                                           Margin="0"/>
+                                <TextBlock Text="查看作者、GitHub 仓库页面以及版本号"
+                                           Style="{StaticResource SettingsCardDescription}"
+                                           Margin="0,2,0,0"/>
+                            </StackPanel>
+                            <FontIcon x:ConnectionId='4' x:Name="AboutChevron" Grid.Column="1"
+                                      Glyph="&#xE70D;"
+                                      FontSize="12"
+                                      VerticalAlignment="Center"/>
+                        </Grid>
+                    </Button>
+
+                    <StackPanel x:ConnectionId='3' x:Name="AboutContent" Visibility="Collapsed"
+                                Padding="24,0,24,20" Spacing="10">
+
+                        <!-- 分隔线 -->
+                        <Border Height="1"
+                                Background="{ThemeResource CardStrokeColorDefaultBrush}"
+                                Margin="0,0,0,6"/>
+
+                        <!-- 版本 -->
+                        <Grid ColumnSpacing="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="版本"
+                                       Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                            <TextBlock Grid.Column="1"
+                                       Text="v0.1.0-beta1"
+                                       TextWrapping="Wrap"/>
+                        </Grid>
+
+                        <!-- 作者 -->
+                        <Grid ColumnSpacing="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="作者"
+                                       Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                            <TextBlock Grid.Column="1">
+                                <Hyperlink NavigateUri="https://space.bilibili.com/2032069531"
+                                           UnderlineStyle="None">
+                                    灰棱HiRenG
+                                </Hyperlink>
+                            </TextBlock>
+                        </Grid>
+
+                        <!-- GitHub -->
+                        <Grid ColumnSpacing="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="GitHub 仓库"
+                                       Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                            <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="12">
+                                <TextBlock>
+                                    <Hyperlink NavigateUri="https://github.com/HL-HiRenG/WAViewer"
+                                               UnderlineStyle="None">
+                                        GitHub 仓库
+                                    </Hyperlink>
+                                </TextBlock>
+                                <TextBlock>
+                                    <Hyperlink NavigateUri="https://github.com/HL-HiRenG/WAViewer/issues"
+                                               UnderlineStyle="None">
+                                        GitHub Issues
+                                    </Hyperlink>
+                                </TextBlock>
+                            </StackPanel>
+                        </Grid>
+
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>
+

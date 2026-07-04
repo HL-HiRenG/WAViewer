@@ -1,0 +1,60 @@
+{
+  "version": 2,
+  "dgSpecHash": "OVdTOKlmx2c=",
+  "success": true,
+  "projectFilePath": "D:\\code\\WAViewer\\WAViewer (Package)\\WAViewer (Package).wapproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HiRenG\\.nuget\\packages\\microsoft.bcl.numerics\\9.0.0\\microsoft.bcl.numerics.9.0.0.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\microsoft.web.webview2\\1.0.3719.77\\microsoft.web.webview2.1.0.3719.77.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\microsoft.windows.ai.machinelearning\\2.1.70\\microsoft.windows.ai.machinelearning.2.1.70.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.28000.2270\\microsoft.windows.sdk.buildtools.10.0.28000.2270.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\microsoft.windows.sdk.buildtools.msix\\1.7.251221100\\microsoft.windows.sdk.buildtools.msix.1.7.251221100.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\microsoft.windowsappsdk\\2.2.0\\microsoft.windowsappsdk.2.2.0.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\microsoft.windowsappsdk.ai\\2.2.3\\microsoft.windowsappsdk.ai.2.2.3.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\microsoft.windowsappsdk.base\\2.0.4\\microsoft.windowsappsdk.base.2.0.4.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\microsoft.windowsappsdk.dwrite\\2.1.0\\microsoft.windowsappsdk.dwrite.2.1.0.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\microsoft.windowsappsdk.foundation\\2.1.0\\microsoft.windowsappsdk.foundation.2.1.0.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\microsoft.windowsappsdk.interactiveexperiences\\2.0.15\\microsoft.windowsappsdk.interactiveexperiences.2.0.15.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\microsoft.windowsappsdk.ml\\2.1.70\\microsoft.windowsappsdk.ml.2.1.70.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\microsoft.windowsappsdk.runtime\\2.2.0\\microsoft.windowsappsdk.runtime.2.2.0.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\microsoft.windowsappsdk.widgets\\2.0.5\\microsoft.windowsappsdk.widgets.2.0.5.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\microsoft.windowsappsdk.winui\\2.2.1\\microsoft.windowsappsdk.winui.2.2.1.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\naudio\\2.2.1\\naudio.2.2.1.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\naudio.asio\\2.2.1\\naudio.asio.2.2.1.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\naudio.core\\2.2.1\\naudio.core.2.2.1.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\naudio.midi\\2.2.1\\naudio.midi.2.2.1.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\naudio.wasapi\\2.2.1\\naudio.wasapi.2.2.1.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\naudio.winforms\\2.2.1\\naudio.winforms.2.2.1.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\naudio.winmm\\2.2.1\\naudio.winmm.2.2.1.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\system.numerics.tensors\\9.0.0\\system.numerics.tensors.9.0.0.nupkg.sha512",
+    "C:\\Users\\HiRenG\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "已使用“net8.0-windows10.0.22621, .NETCoreApp,Version=v3.1, .NETCoreApp,Version=v3.0, .NETCoreApp,Version=v2.0, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1, net11.0-windows10.0.22621, .NETFramework,Version=v4.6.1”而不是项目目标框架“UAP,Version=v10.0.17763”还原包“NAudio 2.2.1”。此包可能与项目不完全兼容。",
+      "projectPath": "D:\\code\\WAViewer\\WAViewer (Package)\\WAViewer (Package).wapproj",
+      "warningLevel": 1,
+      "filePath": "D:\\code\\WAViewer\\WAViewer (Package)\\WAViewer (Package).wapproj",
+      "libraryId": "NAudio",
+      "targetGraphs": [
+        "net451"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "已使用“net8.0-windows10.0.22621, .NETCoreApp,Version=v3.1, .NETCoreApp,Version=v3.0, .NETCoreApp,Version=v2.0, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1, net11.0-windows10.0.22621, .NETFramework,Version=v4.6.1”而不是项目目标框架“UAP,Version=v10.0.17763”还原包“NAudio.WinForms 2.2.1”。此包可能与项目不完全兼容。",
+      "projectPath": "D:\\code\\WAViewer\\WAViewer (Package)\\WAViewer (Package).wapproj",
+      "warningLevel": 1,
+      "filePath": "D:\\code\\WAViewer\\WAViewer (Package)\\WAViewer (Package).wapproj",
+      "libraryId": "NAudio.WinForms",
+      "targetGraphs": [
+        "net451"
+      ]
+    }
+  ]
+}
